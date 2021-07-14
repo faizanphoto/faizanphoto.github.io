@@ -603,6 +603,19 @@
 
   <script src="js/main.js"></script>
   
+<!-- register service worker -->
+        <script>
+          if ('serviceWorker' in navigator)
+          {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(function() { console.log("Service Worker Registered, Cheers to PWA Fire!"); });
+          }
+          );
+        }
+        </script>
+ <!-- end of service worker -->
+
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
